@@ -17,6 +17,7 @@ const showSearchResultDetails = (docs) => {
     const showResult = document.getElementById('searchDetails');
     //clear data
     showResult.textContent = '';
+    //books found
     if (docs.length == 0) {
         const lengthDiv = document.getElementById('booklength');
         lengthDiv.innerHTML = `
@@ -29,6 +30,7 @@ const showSearchResultDetails = (docs) => {
         <h3  style="color: green; text-align: center;">${docs.length} books found</h3>
         `;
     }
+    //forEach abd dynamic html
     docs.forEach(doc => {
         console.log(doc)
         const createDiv = document.createElement('div');
